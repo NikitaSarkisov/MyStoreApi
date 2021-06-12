@@ -42,7 +42,7 @@ namespace MyStoreApi.Controllers
         [HttpPost]
         public IActionResult Create(OrderCreateUpdateDto createOrder)
         {
-            // Load Items enteties by supplied ids
+            // Load Items entities by supplied ids
             var items = GetItemsByIds(createOrder.ItemsIds);
             // If items is null -> request contains illegal item id
             if (items == null || items.Count == 0)

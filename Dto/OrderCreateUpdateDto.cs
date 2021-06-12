@@ -3,7 +3,7 @@
 namespace MyStoreApi.Dto
 {
     /// <summary>
-    /// Defines fileds requited to Create (POST) or Update (PUT) Order.
+    /// Defines fields requited to Create (POST) or Update (PUT) Order.
     /// </summary>
     public class OrderCreateUpdateDto
     {
