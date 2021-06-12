@@ -22,9 +22,9 @@ docker run -d -e ASPNETCORE_URLS=http://+:80 -p 80:80 nikitasarkisov/mystoreapi
 
 ```json
 {
-    "id": { int },
-    "name": { string },
-    "price": { long }
+    "id": "int",
+    "name": "string",
+    "price": "long"
 }
 ```
 
@@ -32,10 +32,10 @@ docker run -d -e ASPNETCORE_URLS=http://+:80 -p 80:80 nikitasarkisov/mystoreapi
 
 ```json
 {
-    "id": { int },
-    "created": { DateTime },
-    "modified": { DateTime? },
-    "items": [ { Item } ]
+    "id": "int",
+    "created": "DateTime",
+    "modified": "DateTime?",
+    "items": [ "Item"]
 }
 ```
 
@@ -82,7 +82,7 @@ GET /api/orders
 ]
 ```
 
-### Get all orders
+### GET all orders
 
 Lists all orders in the store as a json array.
 
@@ -107,7 +107,7 @@ GET /api/orders
 ]
 ```
 
-### Get order by id
+### GET order by id
 
 Gets order by specified Id. Id must be int.
 
@@ -135,7 +135,7 @@ If Id does not exists:
 404 Not Found
 ```
 
-### Create order
+### CREATE order
 
 Create an order with specified items. ItemsIds must be a int array.
 
@@ -152,7 +152,7 @@ POST /api/orders
 `Response`
 
 ```
-200 OK
+201 Created
 
 location: http://localhost/api/orders/2
 
@@ -170,7 +170,7 @@ If any of Item ids does not exist or ItemsIds is empty:
 400 Bad Request
 ```
 
-### Update order
+### UPDATE order
 
 Update order with specified id. ItemsIds must be a int array.
 
@@ -187,7 +187,7 @@ PUT /api/orders/{id}
 `Response`
 
 ```
-200 OK
+201 Created
 
 location: http://localhost/api/orders/1
 
@@ -211,7 +211,7 @@ If Id does not exist:
 404 Not Found
 ```
 
-### Delete order
+### DELETE order
 
 Deletes order with specified id.
 
